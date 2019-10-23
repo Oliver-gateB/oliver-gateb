@@ -11,9 +11,8 @@ html, body, #container, #sidebar, .accordion-container {
     flex-wrap: wrap;
 }
 
-#sidebar {
-    width: 200px;
-    height: 100%;
+#sidebar, .accordion-container {
+    width: 250px;
 }
 
 #content {
