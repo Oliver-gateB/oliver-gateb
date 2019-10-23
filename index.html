@@ -11,23 +11,23 @@
 </head>
 
 <body class="bg-secondary">
-    <div class="container p-2">
-        <div class="columns p-2">
-            <div class="column col-2 s-rounded" id="sidebar">
-                <div class="accordion-container bg-dark p-fixed p-2">
-                    <div class="accordion">
-                        <input id="accordion-html" type="checkbox" hidden="" checked>
-                        <label class="accordion-header c-hand" for="accordion-html">HTML</label>
-                        <div class="accordion-body">
-                            <ul class="menu menu-nav">
-                                <li class="menu-item"><a href="#html">Syntax</a></li>
-                            </ul>
-                        </div>
+    <div id="container">
+        <div id="sidebar">
+            <div class="accordion-container bg-dark p-fixed p-2">
+                <div class="accordion">
+                    <input id="accordion-html" type="checkbox" hidden="" checked>
+                    <label class="accordion-header c-hand" for="accordion-html">HTML</label>
+                    <div class="accordion-body">
+                        <ul class="menu menu-nav">
+                            <li class="menu-item"><a href="#html">Syntax</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div id="content" class="column container">
+        <div id="content">
+            <!-- <div class="container"> -->
                 <div class="hero bg-primary s-rounded">
                     <div class="hero-body">
                         <h6 class="p-2 "><em>gateB Content Team</em></h6>
@@ -46,10 +46,12 @@
                                     data-lang="HTML"><code>&lt;<span class="tag">tag</span> <span class="atn">attribut</span>=<span class="atv">&quot;wert&quot;</span>&gt;Inhalt&lt;/<span class="tag">tag</span>&gt;</code></pre>
                             </li>
                             <li>Element ohne Inhalt (z.B. weicher Umbruch <code>&lt;br /&gt;</code>)
-                                <pre class="code" data-lang="HTML"><code>&lt;<span class="tag">tag</span> <span class="atn">attribut</span>=<span class="atv">&quot;wert&quot;</span> /&gt;</code></pre>
+                                <pre class="code"
+                                    data-lang="HTML"><code>&lt;<span class="tag">tag</span> <span class="atn">attribut</span>=<span class="atv">&quot;wert&quot;</span> /&gt;</code></pre>
                             </li>
                             <li>Kommentar
-                                <pre class="code" data-lang="HTML"><code><span class="com">&lt;!-- Dies ist ein Kommentar --&gt;</span></code></pre>
+                                <pre class="code"
+                                    data-lang="HTML"><code><span class="com">&lt;!-- Dies ist ein Kommentar --&gt;</span></code></pre>
                             </li>
                         </ul>
 
