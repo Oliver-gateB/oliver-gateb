@@ -1,7 +1,6 @@
 const main = () => {
 
     {
-
         const htmlH1 = document.querySelectorAll('h1');
         htmlH1.forEach(h1 => {
             let newHtml = `

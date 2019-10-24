@@ -43,6 +43,31 @@
 <ul>
 <li><a href="#syntax-1">Syntax</a></li>
 <li><a href="#selektoren">Selektoren</a></li>
+<li><a href="#erweiterte-selektoren">erweiterte Selektoren</a></li>
+<li><a href="#excercise-2">Excercise #2</a></li>
+<li><a href="#excercise-3">Excercise #3</a></li>
+<li><a href="#excercise-4">Excercise #4</a></li>
+<li><a href="#hexadezimale-farbdefinitionen">Hexadezimale Farbdefinitionen</a></li>
+<li><a href="#css-einbinden">CSS Einbinden</a></li>
+<li><a href="#shorthands">Shorthands</a></li>
+<li><a href="#verschachteln">Verschachteln</a></li>
+<li><a href="#block-und-inline-elemente-refresh">Block und Inline Elemente (Refresh)</a></li>
+<li><a href="#html-als-baumstruktur">HTML als Baumstruktur</a></li>
+<li><a href="#box-model">Box Model</a>
+<ul>
+<li><a href="#margin">margin</a></li>
+<li><a href="#padding">padding</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#visual-studio-code">Visual Studio Code</a>
+<ul>
+<li><a href="#plugins">Plugins</a></li>
+<li><a href="#nützliche-shortcuts">Nützliche Shortcuts</a>
+<ul>
+<li><a href="#kommentar-ein-ausschalten-aktive-zeile-n">Kommentar ein-/ausschalten (aktive Zeile(n))</a></li>
+<li><a href="#dokument-formattieren">Dokument formattieren</a></li>
+<li><a href="#aktive-stelle-formattieren">aktive Stelle formattieren</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -203,44 +228,214 @@
 <h2 id="selektoren">Selektoren</h2>
 
 <p>Die drei meist-verwendeten Selektoren sind:
-– HTML-Element
-– Class
-– ID</p>
+* HTML-Element
+* Class
+* ID</p>
 
-<p>Beispiel HMTL-Element:</p>
+<p><strong>Beispiel HMTL-Element:</strong></p>
 
-<p>// HTML
-<p>Ich bin ein Paragraph in grüner Schrift</p></p>
+<pre><code>// HTML
+&lt;p&gt;Ich bin ein Paragraph in grüner Schrift&lt;/p&gt;
 
-<p>// CSS
+// CSS
 p {
   color: green;
-}</p>
+}
+</code></pre>
 
-<p>Beispiel Class:</p>
+<p><strong>Beispiel Class:</strong></p>
 
-<p>// HTML
-<p class="special">Ich bin fett</p>
-<p>Ich bin normal</p></p>
+<pre><code>// HTML
+&lt;p class=&quot;special&quot;&gt;Ich bin fett&lt;/p&gt;
+&lt;p&gt;Ich bin normal&lt;/p&gt;
 
-<ul>
-  <li class="special">Ich bin auch fett</li>
-</ul>
+&lt;ul&gt;
+  &lt;li class=&quot;special&quot;&gt;Ich bin auch fett&lt;/li&gt;
+&lt;/ul&gt;
 
-<p>// CSS
+// CSS
 .special {
   font-weight: bold;
-}</p>
+}
+</code></pre>
 
-<p>Beispiel ID:</p>
+<p><strong>Beispiel ID:</strong></p>
 
-<p>// HTML
-<h1 id="warning">Ich bin wichtig und einzigartig! … und unterstrichen!</h1></p>
+<pre><code>// HTML
+&lt;h1 id=&quot;warning&quot;&gt;Ich bin wichtig und einzigartig! … und unterstrichen!&lt;/h1&gt;
 
-<p>// CSS
+// CSS
 #warning {
   text-decoration: underline;
-}</p>
+}
+</code></pre>
+
+<h2 id="erweiterte-selektoren">erweiterte Selektoren</h2>
+
+<ul>
+<li>nebst einfachen Selektoren (HTML-Element, Class, ID), gibt es zahlreiche weitere Möglichkeiten mit Selektoren zu arbeiten. Wir haben die folgenden beiden Möglichkeiten besprochen.</li>
+</ul>
+
+<p><strong>Liste von Selektoren (Komma-getrennt)</strong></p>
+
+<pre><code>p, .class {
+  // hier einige CSS-Definitionen
+}
+</code></pre>
+
+<p>dies entspricht demselben wie:</p>
+
+<pre><code>p {
+  // hier einige CSS-Definitionen
+}
+
+.class {
+  // hier nochmal dieselben CSS-Definitionen
+}
+</code></pre>
+
+<p>Man kann also mehrere Selektoren zusammenfassen.</p>
+
+<p><strong>Selektoren mit Kombinatoren: Nachfahrenselektoren (mit Wortabstand getrennt)</strong></p>
+
+<pre><code>div p {
+  // diese CSS-Definitionen betreffen alle &lt;p&gt;-Elemente, die sich innerhalb eines &lt;div&gt;-Elements befinden
+  // (muss nicht direkt sein!)
+}
+</code></pre>
+
+<h2 id="excercise-2">Excercise #2</h2>
+
+<p><a class="btn" href="downloads/exercise2/exercise2.zip">Download</a></p>
+
+<h2 id="excercise-3">Excercise #3</h2>
+
+<p><a class="btn" href="downloads/exercise3/exercise3.zip">Download</a></p>
+
+<h2 id="excercise-4">Excercise #4</h2>
+
+<p><a class="btn" href="downloads/exercise4/exercise4.zip">Download</a></p>
+
+<h2 id="hexadezimale-farbdefinitionen">Hexadezimale Farbdefinitionen</h2>
+
+<p>Habe noch ein gutes Video dazu gefunden: <a href="https://www.youtube.com/watch?v=GyXXkVZflnA">https://www.youtube.com/watch?v=GyXXkVZflnA</a></p>
+
+<h2 id="css-einbinden">CSS Einbinden</h2>
+
+<ul>
+<li>Inline</li>
+</ul>
+
+<pre><code>&lt;p style=&quot;color: green;&quot;&gt;Dieser Text ist grün&lt;/p&gt;
+</code></pre>
+
+<ul>
+<li>Style-Tag</li>
+</ul>
+
+<pre><code>// im HTML-Dokument, innerhalb des &lt;head&gt;-Elements
+&lt;style&gt;
+p {
+    color: green;
+}
+&lt;/style&gt;
+</code></pre>
+
+<ul>
+<li>Externes Stylesheet</li>
+</ul>
+
+<pre><code>// im HTML-Dokument, innerhalb des &lt;head&gt;-Elements
+&lt;link rel=&quot;stylesheet&quot; href=&quot;pfad/zum/style.css&quot;&gt;
+</code></pre>
+
+<h2 id="shorthands">Shorthands</h2>
+
+<p>Gewisse CSS-Definitionen können verkürzt und auf verschiedene Weisen geschrieben werden:</p>
+
+<pre><code>// ausführlich
+border-width: 1px;
+border-style: solid;
+border-color: #EFEFEF;
+
+
+// Shorthand
+border: 1px solid #EFEFEF;
+</code></pre>
+
+<h2 id="verschachteln">Verschachteln</h2>
+
+<ul>
+<li>HTML Elemente können beliebig tief verschachtelt werden:</li>
+</ul>
+
+<pre><code>&lt;div&gt;
+  &lt;h1&gt;Headline&lt;/h1&gt;
+  &lt;p&gt;Ein bisschen Text und hier noch etwas &lt;em&gt;kursives&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h2 id="block-und-inline-elemente-refresh">Block und Inline Elemente (Refresh)</h2>
+
+<ul>
+<li>die meisten Elemente sind Block-Elemente und verwenden die gesamte Breite, die sie kriegen können (z.B. div- oder p-Element).</li>
+<li>einige wenige Elemente sind Inline-Elemente (z.B. span- oder img-Elemente), die nur so viel Platz einnehmen, wie sie auch wirklich benötigen und somit horizontal Platz freilassen für andere inline Elemente.</li>
+</ul>
+
+<h2 id="html-als-baumstruktur">HTML als Baumstruktur</h2>
+
+<ul>
+<li>Ein HTML kann man auch als Baumstruktur betrachten:</li>
+</ul>
+
+<p><img src="links/baum.png" alt="" /></p>
+
+<p><em>(Screenshot ist direkt aus Visual Studio Code, wen’s interessiert, dem kann ich’s gerne mal zeigen, wo diese Darstellung zu finden ist)</em></p>
+
+<h2 id="box-model">Box Model</h2>
+
+<ul>
+<li>Abstände werden meist mit margin oder padding geregelt:</li>
+</ul>
+
+<h3 id="margin">margin</h3>
+
+<p>Abstand vom Rahmen ( border ) nach Aussen.</p>
+
+<h3 id="padding">padding</h3>
+
+<p>Abstand vom Rahmen ( border ) nach Innen.</p>
+
+<p><a href="https://www.w3schools.com/css/css_boxmodel.asp">https://www.w3schools.com/css/css_boxmodel.asp</a></p>
+
+<p><img src="links/Box_Model.png" alt="" /></p>
+
+<h1 id="visual-studio-code">Visual Studio Code</h1>
+
+<h2 id="plugins">Plugins</h2>
+
+<p>Wir haben folgene Plugins installiert, um beim Arbeiten Zeit zu sparen.</p>
+
+<ul>
+<li>Live Server – <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer</a></li>
+<li>Formatter – <a href="https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify">https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify</a></li>
+</ul>
+
+<p>Einfach melden, wenn ihr Fragen oder Probleme mit den Plugins habt.</p>
+
+<h2 id="nützliche-shortcuts">Nützliche Shortcuts</h2>
+
+<h3 id="kommentar-ein-ausschalten-aktive-zeile-n">Kommentar ein-/ausschalten (aktive Zeile(n))</h3>
+
+<p><strong>SHIFT + CMD + 7</strong></p>
+
+<h3 id="dokument-formattieren">Dokument formattieren</h3>
+
+<p><strong>SHIFT + ALT + F</strong></p>
+
+<h3 id="aktive-stelle-formattieren">aktive Stelle formattieren</h3>
+
+<p><strong>CMD + K</strong>, dann <strong>CMD + F</strong></p>
 
 
 
