@@ -1,0 +1,8 @@
+baseURL = "https://oliver-gateb.github.io/oliver-gateb/"
+languageCode = "de"
+title = "GateB Content Team: Webtraining"
+
+
+[params]
+  flag = "gateB Content Team"
+  title = "Webtraining"
