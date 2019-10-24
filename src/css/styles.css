@@ -1,0 +1,42 @@
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body,
+#container,
+#sidebar,
+.accordion-container {
+    height: 100%;
+}
+
+#sidebar,
+.accordion-container {
+    width: 250px;
+    position: fixed;
+}
+
+#content {
+    margin-left: 300px;
+}
+
+.accordion-header {
+    font-weight: bold;
+    letter-spacing: .2em;
+}
+
+.hero {
+    padding: 1rem;
+    margin-left: -50px;
+}
+
+.hero h1 {
+    margin: 0;
+}
+
+section {
+    padding: 1rem !important;
+    margin-bottom: .4rem !important;
+    margin-top: .4rem !important;
+    max-width: 50rem;
+}

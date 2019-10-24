@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="generator" content="Hugo 0.55.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>
+    GateB Content Team: Webtraining
+    </title>
+</head>
+
+<body class="bg-secondary">
+  <div id="sidebar">
+    <div class="accordion-container bg-dark p-fixed p-2">
+      <div class="">
+        <small class="label label-secondary text-bold">gateB Content Team</small>
+        <h2>Webtraining</h2>
+      </div>
+      <div class="divider"></div>
+        <nav id="TableOfContents">
+<ul>
+<li><a href="#html">HTML</a>
+<ul>
+<li><a href="#syntax">Syntax</a></li>
+<li><a href="#semantik">Semantik</a></li>
+<li><a href="#grundgerüst">Grundgerüst</a></li>
+<li><a href="#excercise-1">Excercise #1</a>
+<ul>
+<li><a href="#ziele">Ziele</a></li>
+<li><a href="#endergebnis">Endergebnis</a></li>
+<li><a href="#schritt-1-html-grundgerüst">Schritt 1: HTML Grundgerüst</a>
+<ul>
+<li><a href="#ziel">Ziel</a></li>
+<li><a href="#hilfestellung">Hilfestellung</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#css">CSS</a></li>
+</ul>
+</nav>
+    </div>
+  </div>
+
+  <div id="content">
+    
+
+    
+
+<h1 id="html">HTML</h1>
+
+<h2 id="syntax">Syntax</h2>
+
+<ul>
+<li>Elemente mit Inhalt (z.B. Paragraph <code>&lt;p&gt;</code>)</li>
+</ul>
+
+<pre><code class="language-html">&lt;tag attribut=&quot;wert&quot;&gt;Inhalt&lt;/tag&gt;
+</code></pre>
+
+<ul>
+<li>Element ohne Inhalt (z.B. weicher Umbruch <code>&lt;br /&gt;</code>)</li>
+</ul>
+
+<pre><code class="language-html">&lt;tag attribut=&quot;wert&quot; /&gt;
+</code></pre>
+
+<ul>
+<li>Kommentar</li>
+</ul>
+
+<p><code>&lt;!-- Dies ist ein Kommentar --&gt;</code></p>
+
+<h2 id="semantik">Semantik</h2>
+
+<p>Syntax ist die Regel, wie wir HTML-Code schreiben. Semantik ist das Ziel, dass der Code für Menschen möglichst verständlich ist. Z.B. statt <code>&lt;div id=&quot;xy&quot;&gt;</code>, besser: <code>&lt;header&gt;</code></p>
+
+<h2 id="grundgerüst">Grundgerüst</h2>
+
+<ul>
+<li>Doctype: Welche HTML-Version früher kompliziert; heute nur noch: <code>&lt;!DOCTYPE html&gt;</code> (immer auf Zeile 1)</li>
+<li>Der Rest:</li>
+</ul>
+
+<pre><code class="language-html">&lt;html&gt;
+  &lt;head&gt;&lt;!-- Hier Metadaten --&gt;&lt;/head&gt;
+  &lt;body&gt;&lt;!-- Hier Inhalt der Webseite --&gt;&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Weitere Themen, die wir angesprochen haben:</p>
+
+<ul>
+<li>Tipps&amp;Tricks in Visual Studio Code (Editor)</li>
+<li>Inline- vs. Block-Elemente</li>
+<li>IDs, Class und Style Attribute</li>
+</ul>
+
+<h2 id="excercise-1">Excercise #1</h2>
+
+<h3 id="ziele">Ziele</h3>
+
+<ul>
+<li>HTML, CSS und JS (inkl. Animation) besser kennen zu lernen.</li>
+<li>Die Grundkenntnisse erarbeiten, um Online Werbemittel erstellen und anpassen zu können.</li>
+</ul>
+
+<h3 id="endergebnis">Endergebnis</h3>
+
+<p><img src="links/01_preview.png" alt="" />;</p>
+
+<h3 id="schritt-1-html-grundgerüst">Schritt 1: HTML Grundgerüst</h3>
+
+<h4 id="ziel">Ziel</h4>
+
+<p><a class="btn" href="links/01_dokument_ohne_styling.pdf">Vorschau</a></p>
+
+<h4 id="hilfestellung">Hilfestellung</h4>
+
+<p>Hier eine Starthilfe (zum Kopieren):</p>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Mein Dokumenten-Name&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;main&gt;
+
+        &lt;!-- TODO: Hier die restlichen HTML-Elemente einfügen.
+
+        (Hilfe) Auswahl von Tags:
+            'h1' bis 'h6'   -&gt; Überschriften
+
+            'p', 'br'       -&gt; Absätze und weiche Umbrüche
+
+            'ul', 'li'      -&gt; Aufzählungen und Listenelemente
+
+            'a'             -&gt; Hyperlinks
+
+            'div', 'span'   -&gt; neutrale Elemente (Block und Inline)
+
+            'img'           -&gt; Bilder/Grafiken
+
+            'strong', 'em'  -&gt; Auszeichnungen
+
+            'form', 'input', 'textarea', 'button'
+                            -&gt; Formular und -elemente
+
+            'header', 'footer',  'main', 'article', 'aside', 'nav', 'section'
+                            -&gt; semantische Tags
+        --&gt;
+
+        &lt;form action=&quot;#&quot;&gt;
+            &lt;input type=&quot;text&quot; placeholder=&quot;Name&quot; required&gt;
+            &lt;textarea cols=&quot;30&quot; rows=&quot;10&quot; placeholder=&quot;Kommentar&quot; required&gt;&lt;/textarea&gt;
+            &lt;button&gt;Absenden&lt;/button&gt;
+        &lt;/form&gt;
+
+    &lt;/main&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h1 id="css">CSS</h1>
+
+<!-- ## hihi -->
+
+
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
