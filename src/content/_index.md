@@ -107,7 +107,72 @@ Hier eine Starthilfe (zum Kopieren):
 </html>
 ```
 
-
 # CSS
 
-<!-- ## hihi -->
+## Syntax
+
+* Selektor `{ Eigenschaft: Wert; }`
+
+**Beispiel:**
+
+```css
+body {
+  font-family: Helvetica;
+  font-size: 12px;
+}
+```
+
+* Kommentare werden mit `/* */` gemacht und können auch über mehrere Zeilen laufen
+
+**Beispiel:**
+
+```css
+body {
+  font-family: Helvetica;
+  /* ich bin ein Kommentar */
+}
+```
+
+## Selektoren
+
+Die drei meist-verwendeten Selektoren sind:
+– HTML-Element
+– Class
+– ID
+
+Beispiel HMTL-Element:
+
+// HTML
+<p>Ich bin ein Paragraph in grüner Schrift</p>
+
+// CSS
+p {
+  color: green;
+}
+
+
+Beispiel Class:
+
+// HTML
+<p class="special">Ich bin fett</p>
+<p>Ich bin normal</p>
+
+<ul>
+  <li class="special">Ich bin auch fett</li>
+</ul>
+
+// CSS
+.special {
+  font-weight: bold;
+}
+
+
+Beispiel ID:
+
+// HTML
+<h1 id="warning">Ich bin wichtig und einzigartig! … und unterstrichen!</h1>
+
+// CSS
+#warning {
+  text-decoration: underline;
+}

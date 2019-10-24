@@ -1,141 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
-    <title>GateB Content Team: Webtraining</title>
-    <link rel="stylesheet" href="css/styles.css">
+	<meta name="generator" content="Hugo 0.55.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>
+    GateB Content Team: Webtraining
+    </title>
 </head>
 
 <body class="bg-secondary">
-    <div id="sidebar">
-        <div class="accordion-container bg-dark p-fixed p-2">
-            <div class="">
-                <small class="label label-secondary text-bold">gateB Content Team</small>
-                <h2>Webtraining</h2>
-            </div>
-            <div class="divider"></div>
-            <div class="accordion">
-                <input id="accordion-html" type="checkbox" hidden="" checked>
-                <label class="accordion-header c-hand" for="accordion-html">HTML</label>
-                <div class="accordion-body">
-                    <ul class="menu menu-nav">
-                        <li class="menu-item"><a href="#html-Syntax">Syntax</a></li>
-                        <li class="menu-item"><a href="#html-Semantik">Semantik</a></li>
-                        <li class="menu-item"><a href="#html-Grundgeruest">Grundgerüst</a></li>
-                        <li class="menu-item"><a href="#html-Excercise1"><em> Excercise #1</em></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="accordion">
-                <input id="accordion-css" type="checkbox" hidden="" checked>
-                <label class="accordion-header c-hand" for="accordion-css">CSS</label>
-                <div class="accordion-body">
-                    <ul class="menu menu-nav">
-                        <li class="menu-item"><a href="#css-Syntax">Syntax</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+  <div id="sidebar">
+    <div class="accordion-container bg-dark p-fixed p-2">
+      <div class="">
+        <small class="label label-secondary text-bold">gateB Content Team</small>
+        <h2>Webtraining</h2>
+      </div>
+      <div class="divider"></div>
+        <nav id="TableOfContents">
+<ul>
+<li><a href="#html">HTML</a>
+<ul>
+<li><a href="#syntax">Syntax</a></li>
+<li><a href="#semantik">Semantik</a></li>
+<li><a href="#grundgerüst">Grundgerüst</a></li>
+<li><a href="#excercise-1">Excercise #1</a>
+<ul>
+<li><a href="#ziele">Ziele</a></li>
+<li><a href="#endergebnis">Endergebnis</a></li>
+<li><a href="#schritt-1-html-grundgerüst">Schritt 1: HTML Grundgerüst</a>
+<ul>
+<li><a href="#ziel">Ziel</a></li>
+<li><a href="#hilfestellung">Hilfestellung</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#css">CSS</a>
+<ul>
+<li><a href="#syntax-1">Syntax</a></li>
+<li><a href="#selektoren">Selektoren</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
+  </div>
 
-    <div id="content">
-        <div class="hero bg-primary" id="html-Syntax">
-            <div class="hero-body">
-                <h1 class="p-2">HTML</h1>
-            </div>
-        </div>
+  <div id="content">
+    
 
-        <div class="container p-2 m-2">
-            <section>
-                <h2>Syntax</h2>
-                <ul>
-                    <li>Elemente mit Inhalt (z.B. Paragraph <code>&lt;p&gt;</code>)
-                        <pre class="code"
-                            data-lang="HTML"><code>&lt;<span class="tag">tag</span> <span class="atn">attribut</span>=<span class="atv">&quot;wert&quot;</span>&gt;Inhalt&lt;/<span class="tag">tag</span>&gt;</code></pre>
-                    </li>
-                    <li>Element ohne Inhalt (z.B. weicher Umbruch <code>&lt;br /&gt;</code>)
-                        <pre class="code"
-                            data-lang="HTML"><code>&lt;<span class="tag">tag</span> <span class="atn">attribut</span>=<span class="atv">&quot;wert&quot;</span> /&gt;</code></pre>
-                    </li>
-                    <li>Kommentar
-                        <pre class="code"
-                            data-lang="HTML"><code><span class="com">&lt;!-- Dies ist ein Kommentar --&gt;</span></code></pre>
-                    </li>
-                </ul>
-            </section>
-            <section id="html-Semantik">
-                <h2>Semantik</h2>
-                <ul>
-                    <li> Syntax ist die Regel, wie wir HTML-Code schreiben. Semantik ist das Ziel, dass der Code
-                        für Menschen möglichst verständlich ist.
-                        Z.B. statt <code>&lt;div id="xy"&gt;</code>, besser: <code>&lt;header&gt;</code>
-                    </li>
-                </ul>
-            </section>
-            <section id="html-Grundgeruest">
-                <h2>Grundgerüst</h2>
-                <ul>
-                    <li>Doctype: Welche HTML-Version
-                        früher kompliziert; heute nur noch: <code>&lt;!DOCTYPE html&gt;</code> (immer auf Zeile 1)
-                    </li>
+    
 
-                    <li>Der Rest: 
-                        <pre class="code" data-lang="HTML"><code>
-&lt;html&gt;
-  &lt;head&gt;&lt;!-- Hier Metadaten --&gt;&lt;/head&gt;
-  &lt;body&gt;&lt;!-- Hier Inhalt der Webseite --&gt;&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-                    </li>
-                </ul>
-            </section>
-            <section>
-                <p>Weitere Themen, die wir angesprochen haben:</p>
-                <ul>
-                    <li>
-                        Tipps&Tricks in Visual Studio Code (Editor)
-                    </li>
-                    <li>
-                        Inline- vs. Block-Elemente
-                    </li>
-                    <li>
-                        IDs, Class und Style Attribute
-                    </li>
-                </ul>
-            </section>
+<h1 id="html">HTML</h1>
 
-            <section id="html-Excercise1">
-                <h2>Excercise #1</h2>
+<h2 id="syntax">Syntax</h2>
 
-                <h3 id="ziele">Ziele</h3>
+<ul>
+<li>Elemente mit Inhalt (z.B. Paragraph <code>&lt;p&gt;</code>)</li>
+</ul>
 
-                <ul>
-                    <li>HTML, CSS und JS (inkl. Animation) besser kennen zu lernen.</li>
+<pre><code class="language-html">&lt;tag attribut=&quot;wert&quot;&gt;Inhalt&lt;/tag&gt;
+</code></pre>
 
-                    <li>Die Grundkenntnisse erarbeiten, um Online Werbemittel erstellen und anpassen zu können.</li>
-                </ul>
+<ul>
+<li>Element ohne Inhalt (z.B. weicher Umbruch <code>&lt;br /&gt;</code>)</li>
+</ul>
 
-                <h3 id="endergebnis">Endergebnis</h3>
+<pre><code class="language-html">&lt;tag attribut=&quot;wert&quot; /&gt;
+</code></pre>
 
-                <p><img src="links/01_preview.png" alt="" /></p>
+<ul>
+<li>Kommentar</li>
+</ul>
 
-                <h3 id="schritt1htmlgrundgerst">Schritt 1: HTML Grundgerüst</h3>
-                <h4>Ziel</h4>
+<p><code>&lt;!-- Dies ist ein Kommentar --&gt;</code></p>
 
-                <p class="btn"><a href="links/01_dokument_ohne_styling.pdf">Vorschau</a></p>
+<h2 id="semantik">Semantik</h2>
 
-                <h4 id="hilfestellung">Hilfestellung</h4>
+<p>Syntax ist die Regel, wie wir HTML-Code schreiben. Semantik ist das Ziel, dass der Code für Menschen möglichst verständlich ist. Z.B. statt <code>&lt;div id=&quot;xy&quot;&gt;</code>, besser: <code>&lt;header&gt;</code></p>
 
-                <p>Hier eine Starthilfe (zum Kopieren):</p>
+<h2 id="grundgerüst">Grundgerüst</h2>
 
-                <pre class="code" data-lang="HTML"><code>
-&lt;!DOCTYPE html&gt;
+<ul>
+<li>Doctype: Welche HTML-Version früher kompliziert; heute nur noch: <code>&lt;!DOCTYPE html&gt;</code> (immer auf Zeile 1)</li>
+<li>Der Rest:</li>
+</ul>
+
+<pre><code class="language-html">&lt;html&gt;
+  &lt;head&gt;&lt;!-- Hier Metadaten --&gt;&lt;/head&gt;
+  &lt;body&gt;&lt;!-- Hier Inhalt der Webseite --&gt;&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Weitere Themen, die wir angesprochen haben:</p>
+
+<ul>
+<li>Tipps&amp;Tricks in Visual Studio Code (Editor)</li>
+<li>Inline- vs. Block-Elemente</li>
+<li>IDs, Class und Style Attribute</li>
+</ul>
+
+<h2 id="excercise-1">Excercise #1</h2>
+
+<h3 id="ziele">Ziele</h3>
+
+<ul>
+<li>HTML, CSS und JS (inkl. Animation) besser kennen zu lernen.</li>
+<li>Die Grundkenntnisse erarbeiten, um Online Werbemittel erstellen und anpassen zu können.</li>
+</ul>
+
+<h3 id="endergebnis">Endergebnis</h3>
+
+<p><img src="links/01_preview.png" alt="" />;</p>
+
+<h3 id="schritt-1-html-grundgerüst">Schritt 1: HTML Grundgerüst</h3>
+
+<h4 id="ziel">Ziel</h4>
+
+<p><a class="btn" href="links/01_dokument_ohne_styling.pdf">Vorschau</a></p>
+
+<h4 id="hilfestellung">Hilfestellung</h4>
+
+<p>Hier eine Starthilfe (zum Kopieren):</p>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
     &lt;title&gt;Mein Dokumenten-Name&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -166,9 +160,9 @@
                             -&gt; semantische Tags
         --&gt;
 
-        &lt;form action="#"&gt;
-            &lt;input type="text" placeholder="Name" required&gt;
-            &lt;textarea cols="30" rows="10" placeholder="Kommentar" required&gt;&lt;/textarea&gt;
+        &lt;form action=&quot;#&quot;&gt;
+            &lt;input type=&quot;text&quot; placeholder=&quot;Name&quot; required&gt;
+            &lt;textarea cols=&quot;30&quot; rows=&quot;10&quot; placeholder=&quot;Kommentar&quot; required&gt;&lt;/textarea&gt;
             &lt;button&gt;Absenden&lt;/button&gt;
         &lt;/form&gt;
 
@@ -177,21 +171,82 @@
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-            </section>
-        </div>
-        <div class="hero bg-primary" id="css-Syntax">
-            <div class="hero-body">
-                <h1 class="p-2">CSS</h1>
-            </div>
-        </div>
 
-        <div class="container p-2 m-2">
-            <section>
-                <h2>Syntax</h2>
-            </section>
-        </div>
-    </div>
+<h1 id="css">CSS</h1>
 
+<h2 id="syntax-1">Syntax</h2>
+
+<ul>
+<li>Selektor <code>{ Eigenschaft: Wert; }</code></li>
+</ul>
+
+<p><strong>Beispiel:</strong></p>
+
+<pre><code class="language-css">body {
+  font-family: Helvetica;
+  font-size: 12px;
+}
+</code></pre>
+
+<ul>
+<li>Kommentare werden mit <code>/* */</code> gemacht und können auch über mehrere Zeilen laufen</li>
+</ul>
+
+<p><strong>Beispiel:</strong></p>
+
+<pre><code class="language-css">body {
+  font-family: Helvetica;
+  /* ich bin ein Kommentar */
+}
+</code></pre>
+
+<h2 id="selektoren">Selektoren</h2>
+
+<p>Die drei meist-verwendeten Selektoren sind:
+– HTML-Element
+– Class
+– ID</p>
+
+<p>Beispiel HMTL-Element:</p>
+
+<p>// HTML
+<p>Ich bin ein Paragraph in grüner Schrift</p></p>
+
+<p>// CSS
+p {
+  color: green;
+}</p>
+
+<p>Beispiel Class:</p>
+
+<p>// HTML
+<p class="special">Ich bin fett</p>
+<p>Ich bin normal</p></p>
+
+<ul>
+  <li class="special">Ich bin auch fett</li>
+</ul>
+
+<p>// CSS
+.special {
+  font-weight: bold;
+}</p>
+
+<p>Beispiel ID:</p>
+
+<p>// HTML
+<h1 id="warning">Ich bin wichtig und einzigartig! … und unterstrichen!</h1></p>
+
+<p>// CSS
+#warning {
+  text-decoration: underline;
+}</p>
+
+
+
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>
