@@ -27,9 +27,12 @@
 <ul>
 <li><a href="#syntax">Syntax</a></li>
 <li><a href="#semantik">Semantik</a></li>
-<li><a href="#grundgerüst">Grundgerüst</a></li>
-<li><a href="#excercise-1">Excercise #1</a>
+<li><a href="#grundgerüst">Grundgerüst</a>
 <ul>
+<li><a href="#verschachteln">Verschachteln</a></li>
+<li><a href="#block-und-inline-elemente-refresh">Block und Inline Elemente (Refresh)</a></li>
+<li><a href="#html-als-baumstruktur">HTML als Baumstruktur</a></li>
+<li><a href="#excercise-1">Excercise #1</a></li>
 <li><a href="#ziele">Ziele</a></li>
 <li><a href="#endergebnis">Endergebnis</a></li>
 <li><a href="#schritt-1-html-grundgerüst">Schritt 1: HTML Grundgerüst</a>
@@ -43,16 +46,15 @@
 <ul>
 <li><a href="#einbinden">Einbinden</a></li>
 <li><a href="#syntax-1">Syntax</a></li>
-<li><a href="#selektoren">Selektoren</a></li>
+<li><a href="#selektoren">Selektoren</a>
+<ul>
 <li><a href="#erweiterte-selektoren">erweiterte Selektoren</a></li>
 <li><a href="#excercise-2">Excercise #2</a></li>
 <li><a href="#excercise-3">Excercise #3</a></li>
 <li><a href="#excercise-4">Excercise #4</a></li>
+</ul></li>
 <li><a href="#hexadezimale-farbdefinitionen">Hexadezimale Farbdefinitionen</a></li>
 <li><a href="#shorthands">Shorthands</a></li>
-<li><a href="#verschachteln">Verschachteln</a></li>
-<li><a href="#block-und-inline-elemente-refresh">Block und Inline Elemente (Refresh)</a></li>
-<li><a href="#html-als-baumstruktur">HTML als Baumstruktur</a></li>
 <li><a href="#box-model">Box Model</a>
 <ul>
 <li><a href="#margin">margin</a></li>
@@ -61,8 +63,8 @@
 <li><a href="#absolute-positionierung">Absolute Positionierung</a>
 <ul>
 <li><a href="#ebenenreihenfolge">Ebenenreihenfolge</a></li>
-</ul></li>
 <li><a href="#excercise-5">Excercise #5</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#javascript">JavaScript</a>
 <ul>
@@ -156,7 +158,34 @@
 <li>IDs, Class und Style Attribute</li>
 </ul>
 
-<h2 id="excercise-1">Excercise #1</h2>
+<h3 id="verschachteln">Verschachteln</h3>
+
+<ul>
+<li>HTML Elemente können beliebig tief verschachtelt werden:</li>
+</ul>
+
+<pre><code>&lt;div&gt;
+  &lt;h1&gt;Headline&lt;/h1&gt;
+  &lt;p&gt;Ein bisschen Text und hier noch etwas &lt;em&gt;kursives&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3 id="block-und-inline-elemente-refresh">Block und Inline Elemente (Refresh)</h3>
+
+<ul>
+<li>die meisten Elemente sind Block-Elemente und verwenden die gesamte Breite, die sie kriegen können (z.B. div- oder p-Element).</li>
+<li>einige wenige Elemente sind Inline-Elemente (z.B. span- oder img-Elemente), die nur so viel Platz einnehmen, wie sie auch wirklich benötigen und somit horizontal Platz freilassen für andere inline Elemente.</li>
+</ul>
+
+<h3 id="html-als-baumstruktur">HTML als Baumstruktur</h3>
+
+<ul>
+<li>Ein HTML kann man auch als Baumstruktur betrachten:</li>
+</ul>
+
+<p><img src="links/baum.png" alt="" /></p>
+
+<h3 id="excercise-1">Excercise #1</h3>
 
 <h3 id="ziele">Ziele</h3>
 
@@ -327,7 +356,7 @@ p {
 }
 </code></pre>
 
-<h2 id="erweiterte-selektoren">erweiterte Selektoren</h2>
+<h3 id="erweiterte-selektoren">erweiterte Selektoren</h3>
 
 <ul>
 <li>nebst einfachen Selektoren (HTML-Element, Class, ID), gibt es zahlreiche weitere Möglichkeiten mit Selektoren zu arbeiten. Wir haben die folgenden beiden Möglichkeiten besprochen.</li>
@@ -361,15 +390,15 @@ p {
 }
 </code></pre>
 
-<h2 id="excercise-2">Excercise #2</h2>
+<h3 id="excercise-2">Excercise #2</h3>
 
 <p><a class="btn" href="downloads/exercise2/exercise2.zip">Download</a></p>
 
-<h2 id="excercise-3">Excercise #3</h2>
+<h3 id="excercise-3">Excercise #3</h3>
 
 <p><a class="btn" href="downloads/exercise3/exercise3.zip">Download</a></p>
 
-<h2 id="excercise-4">Excercise #4</h2>
+<h3 id="excercise-4">Excercise #4</h3>
 
 <p><a class="btn" href="downloads/exercise4/exercise4.zip">Download</a></p>
 
@@ -390,33 +419,6 @@ border-color: #EFEFEF;
 // Shorthand
 border: 1px solid #EFEFEF;
 </code></pre>
-
-<h2 id="verschachteln">Verschachteln</h2>
-
-<ul>
-<li>HTML Elemente können beliebig tief verschachtelt werden:</li>
-</ul>
-
-<pre><code>&lt;div&gt;
-  &lt;h1&gt;Headline&lt;/h1&gt;
-  &lt;p&gt;Ein bisschen Text und hier noch etwas &lt;em&gt;kursives&lt;/em&gt;.&lt;/p&gt;
-&lt;/div&gt;
-</code></pre>
-
-<h2 id="block-und-inline-elemente-refresh">Block und Inline Elemente (Refresh)</h2>
-
-<ul>
-<li>die meisten Elemente sind Block-Elemente und verwenden die gesamte Breite, die sie kriegen können (z.B. div- oder p-Element).</li>
-<li>einige wenige Elemente sind Inline-Elemente (z.B. span- oder img-Elemente), die nur so viel Platz einnehmen, wie sie auch wirklich benötigen und somit horizontal Platz freilassen für andere inline Elemente.</li>
-</ul>
-
-<h2 id="html-als-baumstruktur">HTML als Baumstruktur</h2>
-
-<ul>
-<li>Ein HTML kann man auch als Baumstruktur betrachten:</li>
-</ul>
-
-<p><img src="links/baum.png" alt="" /></p>
 
 <h2 id="box-model">Box Model</h2>
 
@@ -450,7 +452,7 @@ border: 1px solid #EFEFEF;
 
 <p>Werden verschiedene Elemente relativ oder absolut positioniert, kann mit der Eigentschaft <code>z-index</code> gesteuert werden, welches Element welches Element überdeckt.</p>
 
-<h2 id="excercise-5">Excercise #5</h2>
+<h3 id="excercise-5">Excercise #5</h3>
 
 <p><a class="btn" href="downloads/exercise5/exercise5.zip">Download</a></p>
 

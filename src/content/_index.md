@@ -40,7 +40,29 @@ Weitere Themen, die wir angesprochen haben:
 * Inline- vs. Block-Elemente
 * IDs, Class und Style Attribute
 
-## Excercise #1
+### Verschachteln
+
+* HTML Elemente können beliebig tief verschachtelt werden:
+
+```
+<div>
+  <h1>Headline</h1>
+  <p>Ein bisschen Text und hier noch etwas <em>kursives</em>.</p>
+</div>
+```
+
+### Block und Inline Elemente (Refresh)
+
+* die meisten Elemente sind Block-Elemente und verwenden die gesamte Breite, die sie kriegen können (z.B. div- oder p-Element).
+* einige wenige Elemente sind Inline-Elemente (z.B. span- oder img-Elemente), die nur so viel Platz einnehmen, wie sie auch wirklich benötigen und somit horizontal Platz freilassen für andere inline Elemente.
+
+### HTML als Baumstruktur
+
+* Ein HTML kann man auch als Baumstruktur betrachten:
+
+![](links/baum.png)
+
+### Excercise #1
 
 ### Ziele
 
@@ -207,7 +229,7 @@ p {
 }
 ```
 
-## erweiterte Selektoren
+### erweiterte Selektoren
 * nebst einfachen Selektoren (HTML-Element, Class, ID), gibt es zahlreiche weitere Möglichkeiten mit Selektoren zu arbeiten. Wir haben die folgenden beiden Möglichkeiten besprochen.
 
 **Liste von Selektoren (Komma-getrennt)**
@@ -241,18 +263,17 @@ div p {
 }
 ```
 
-## Excercise #2
+### Excercise #2
 
 <a class="btn" href="downloads/exercise2/exercise2.zip">Download</a>
 
-## Excercise #3
+### Excercise #3
 
 <a class="btn" href="downloads/exercise3/exercise3.zip">Download</a>
 
-## Excercise #4
+### Excercise #4
 
 <a class="btn" href="downloads/exercise4/exercise4.zip">Download</a>
-
 
 ## Hexadezimale Farbdefinitionen
 
@@ -273,28 +294,6 @@ border-color: #EFEFEF;
 // Shorthand
 border: 1px solid #EFEFEF;
 ```
-
-## Verschachteln
-
-* HTML Elemente können beliebig tief verschachtelt werden:
-
-```
-<div>
-  <h1>Headline</h1>
-  <p>Ein bisschen Text und hier noch etwas <em>kursives</em>.</p>
-</div>
-```
-
-## Block und Inline Elemente (Refresh)
-
-* die meisten Elemente sind Block-Elemente und verwenden die gesamte Breite, die sie kriegen können (z.B. div- oder p-Element).
-* einige wenige Elemente sind Inline-Elemente (z.B. span- oder img-Elemente), die nur so viel Platz einnehmen, wie sie auch wirklich benötigen und somit horizontal Platz freilassen für andere inline Elemente.
-
-## HTML als Baumstruktur
-
-* Ein HTML kann man auch als Baumstruktur betrachten:
-
-![](links/baum.png)
 
 ## Box Model
 * Abstände werden meist mit margin oder padding geregelt:
@@ -321,7 +320,7 @@ _[Link zur Dokumentation, MDN](https://developer.mozilla.org/de/docs/Web/CSS/pos
 
 Werden verschiedene Elemente relativ oder absolut positioniert, kann mit der Eigentschaft `z-index` gesteuert werden, welches Element welches Element überdeckt.
 
-## Excercise #5
+### Excercise #5
 
 <a class="btn" href="downloads/exercise5/exercise5.zip">Download</a>
 
