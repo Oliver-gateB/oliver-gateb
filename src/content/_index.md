@@ -344,7 +344,7 @@ Die Programmiersprache _JavaScript_ (kurz _JS_) wird für vieles eingesetzt (Bei
 * Ähnlich wie _CSS_ werden JavaScript-Ausdrucke mit einem Semikolon (`;`) beendet.
 * Ebenfalls ähnlich wie _CSS_, werden Blocks mit geschweiften Klammern (`{...}`) zusammengehalten (Diese Klammern werden aber auch für andere Dinge verwendet).
 * Namen für Variablen, Funktionen und weitere Namen, die man selbst wählen kann, werden in der sogenannten _camelCase_-Schreibweise geschrieben: Erster Buchstabe wird klein geschrieben; Wenn mehrere Worte zusammengenommen werden, beginnt jedes weitere Wort mit einem Grossbuchstaben. (Beispiele: `meineVariable`, `autoBauMaschine`, `htmlToCssConverter`).
-* **Kommentare** werden wir im _CSS_ entweder mit `//` (Zeilenkommentar) oder `/* */` (Blockkommentar) geschrieben.
+* **Kommentare** werden wie im _CSS_ entweder mit `//` (Zeilenkommentar) oder `/* */` (Blockkommentar) geschrieben.
 
 ## Konsole
 
