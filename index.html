@@ -41,6 +41,7 @@
 </ul></li>
 <li><a href="#css">CSS</a>
 <ul>
+<li><a href="#einbinden">Einbinden</a></li>
 <li><a href="#syntax-1">Syntax</a></li>
 <li><a href="#selektoren">Selektoren</a></li>
 <li><a href="#erweiterte-selektoren">erweiterte Selektoren</a></li>
@@ -48,7 +49,6 @@
 <li><a href="#excercise-3">Excercise #3</a></li>
 <li><a href="#excercise-4">Excercise #4</a></li>
 <li><a href="#hexadezimale-farbdefinitionen">Hexadezimale Farbdefinitionen</a></li>
-<li><a href="#css-einbinden">CSS Einbinden</a></li>
 <li><a href="#shorthands">Shorthands</a></li>
 <li><a href="#verschachteln">Verschachteln</a></li>
 <li><a href="#block-und-inline-elemente-refresh">Block und Inline Elemente (Refresh)</a></li>
@@ -57,6 +57,34 @@
 <ul>
 <li><a href="#margin">margin</a></li>
 <li><a href="#padding">padding</a></li>
+</ul></li>
+<li><a href="#absolute-positionierung">Absolute Positionierung</a>
+<ul>
+<li><a href="#ebenenreihenfolge">Ebenenreihenfolge</a></li>
+</ul></li>
+<li><a href="#excercise-5">Excercise #5</a></li>
+</ul></li>
+<li><a href="#javascript">JavaScript</a>
+<ul>
+<li><a href="#einleitung">Einleitung</a></li>
+<li><a href="#syntax-2">Syntax</a></li>
+<li><a href="#konsole">Konsole</a></li>
+<li><a href="#erste-konzepte">Erste Konzepte</a>
+<ul>
+<li><a href="#zahlen">Zahlen</a></li>
+<li><a href="#string-text">String / Text</a></li>
+<li><a href="#variablen">Variablen</a>
+<ul>
+<li><a href="#daten-an-variablen-binden-informationen-speichern">Daten an Variablen binden / Informationen speichern</a></li>
+<li><a href="#was-ist-so-toll-an-variablen">Was ist so toll an Variablen?</a></li>
+<li><a href="#weiteres">Weiteres</a></li>
+</ul></li>
+<li><a href="#boolean">Boolean</a></li>
+</ul></li>
+<li><a href="#funktionen">Funktionen</a>
+<ul>
+<li><a href="#definieren">Definieren</a></li>
+<li><a href="#aufrufen">Aufrufen</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#visual-studio-code">Visual Studio Code</a>
@@ -199,6 +227,35 @@
 
 <h1 id="css">CSS</h1>
 
+<h2 id="einbinden">Einbinden</h2>
+
+<ul>
+<li>Inline</li>
+</ul>
+
+<pre><code>&lt;p style=&quot;color: green;&quot;&gt;Dieser Text ist grün&lt;/p&gt;
+</code></pre>
+
+<ul>
+<li>Style-Tag</li>
+</ul>
+
+<pre><code>// im HTML-Dokument, innerhalb des &lt;head&gt;-Elements
+&lt;style&gt;
+p {
+    color: green;
+}
+&lt;/style&gt;
+</code></pre>
+
+<ul>
+<li>Externes Stylesheet</li>
+</ul>
+
+<pre><code>// im HTML-Dokument, innerhalb des &lt;head&gt;-Elements
+&lt;link rel=&quot;stylesheet&quot; href=&quot;pfad/zum/style.css&quot;&gt;
+</code></pre>
+
 <h2 id="syntax-1">Syntax</h2>
 
 <ul>
@@ -320,35 +377,6 @@ p {
 
 <p>Habe noch ein gutes Video dazu gefunden: <a href="https://www.youtube.com/watch?v=GyXXkVZflnA">https://www.youtube.com/watch?v=GyXXkVZflnA</a></p>
 
-<h2 id="css-einbinden">CSS Einbinden</h2>
-
-<ul>
-<li>Inline</li>
-</ul>
-
-<pre><code>&lt;p style=&quot;color: green;&quot;&gt;Dieser Text ist grün&lt;/p&gt;
-</code></pre>
-
-<ul>
-<li>Style-Tag</li>
-</ul>
-
-<pre><code>// im HTML-Dokument, innerhalb des &lt;head&gt;-Elements
-&lt;style&gt;
-p {
-    color: green;
-}
-&lt;/style&gt;
-</code></pre>
-
-<ul>
-<li>Externes Stylesheet</li>
-</ul>
-
-<pre><code>// im HTML-Dokument, innerhalb des &lt;head&gt;-Elements
-&lt;link rel=&quot;stylesheet&quot; href=&quot;pfad/zum/style.css&quot;&gt;
-</code></pre>
-
 <h2 id="shorthands">Shorthands</h2>
 
 <p>Gewisse CSS-Definitionen können verkürzt und auf verschiedene Weisen geschrieben werden:</p>
@@ -390,8 +418,6 @@ border: 1px solid #EFEFEF;
 
 <p><img src="links/baum.png" alt="" /></p>
 
-<p><em>(Screenshot ist direkt aus Visual Studio Code, wen’s interessiert, dem kann ich’s gerne mal zeigen, wo diese Darstellung zu finden ist)</em></p>
-
 <h2 id="box-model">Box Model</h2>
 
 <ul>
@@ -409,6 +435,196 @@ border: 1px solid #EFEFEF;
 <p><a href="https://www.w3schools.com/css/css_boxmodel.asp">https://www.w3schools.com/css/css_boxmodel.asp</a></p>
 
 <p><img src="links/Box_Model.png" alt="" /></p>
+
+<h2 id="absolute-positionierung">Absolute Positionierung</h2>
+
+<p><em><a href="https://developer.mozilla.org/de/docs/Web/CSS/position">Link zur Dokumentation, MDN</a></em></p>
+
+<ul>
+<li>Der Standardwert ist <code>static</code>: Alle Elemente sind im Dokumentenfluss und verdrängen sich gegenseitig.</li>
+<li>Mit <code>relative</code> bleibt das Element im Dokumentenfluss. Kann jedoch mit den Eigenschaften <code>top</code>, <code>bottom</code>, <code>left</code> und <code>right</code> relativ zur Ausgangsposition verschoben werden. Der ursprüngliche Platz wird jedoch weiterhin «benützt» und verdrängt andere Elemente, als ob das Element in seiner Ursprungsposition wäre.</li>
+<li>Mit <code>absolute</code> nimmt man das Element komplett aus dem Fluss. Verwendet man dazu <code>top</code>, <code>bottom</code>, <code>left</code> und <code>right</code>, wird das Element relativ zum Browser platziert. Man kann diese Abhängigkeit ändern, indem man einem Eltern-(!)-Element eine Position <code>relative</code> oder <code>absolute</code> gibt.</li>
+</ul>
+
+<h3 id="ebenenreihenfolge">Ebenenreihenfolge</h3>
+
+<p>Werden verschiedene Elemente relativ oder absolut positioniert, kann mit der Eigentschaft <code>z-index</code> gesteuert werden, welches Element welches Element überdeckt.</p>
+
+<h2 id="excercise-5">Excercise #5</h2>
+
+<p><a class="btn" href="downloads/exercise5/exercise5.zip">Download</a></p>
+
+<h1 id="javascript">JavaScript</h1>
+
+<h2 id="einleitung">Einleitung</h2>
+
+<p>Die Programmiersprache <em>JavaScript</em> (kurz <em>JS</em>) wird für vieles eingesetzt (Beispiele):</p>
+
+<ul>
+<li>Interaktivität im Internet
+
+<ul>
+<li>Animationen</li>
+<li>Formular Validierung</li>
+</ul></li>
+<li>Interaktive PDFs</li>
+<li>Scripting in InDesign</li>
+<li>Server-seitig</li>
+</ul>
+
+<p>(<em>JavaScript</em> ist nicht zu verwechseln mit <em>Java</em>, eine andere Programmiersprache!)</p>
+
+<h2 id="syntax-2">Syntax</h2>
+
+<ul>
+<li>Ähnlich wie <em>CSS</em> werden JavaScript-Ausdrucke mit einem Semikolon (<code>;</code>) beendet.</li>
+<li>Ebenfalls ähnlich wie <em>CSS</em>, werden Blocks mit geschweiften Klammern (<code>{...}</code>) zusammengehalten (Diese Klammern werden aber auch für andere Dinge verwendet).</li>
+<li>Namen für Variablen, Funktionen und weitere Namen, die man selbst wählen kann, werden in der sogenannten <em>camelCase</em>-Schreibweise geschrieben: Erster Buchstabe wird klein geschrieben; Wenn mehrere Worte zusammengenommen werden, beginnt jedes weitere Wort mit einem Grossbuchstaben. (Beispiele: <code>meineVariable</code>, <code>autoBauMaschine</code>, <code>htmlToCssConverter</code>).</li>
+<li><strong>Kommentare</strong> werden wir im <em>CSS</em> entweder mit <code>//</code> (Zeilenkommentar) oder <code>/* */</code> (Blockkommentar) geschrieben.</li>
+</ul>
+
+<h2 id="konsole">Konsole</h2>
+
+<p>Die meisten Webbrowser kommen mit einer JavaScript-Konsole, die erlauben es schnelle Fehler zu finden (sog. <em>Debugging</em>) und mithilfe von JavaScript direkt mit der Webseite zu interagieren.</p>
+
+<p>Im <em>Google Chrome</em> kann die Konsole aufgerufen werden, indem man einen Rechtsklick auf eine Webseite macht, dabei den Menüpunkt «Untersuchen» wählt und anschliessend im nun offnen Bereich (sog. <em>DevTools</em> -&gt; Developer Tools -&gt; Werkzeuge für Entwickler) auf das Tab <em>Console</em> wechselt.</p>
+
+<p>Darin kann direkt JavaScript geschrieben werden und man erhält nach jedem Enter sogleich ein Feedback, falls man der Konsole auch was zu tun gegeben hat. Z.B. <code>3 + 5;</code> gibt die Antwort <code>8</code>;</p>
+
+<p>Eine gute Alternative, um mit der JavaScript und der Konsole Dinge zu testen, empfehle ich die <a href="https://repl.it/languages">REPL-Seite</a> -&gt; «HTML, CSS, JS».</p>
+
+<h2 id="erste-konzepte">Erste Konzepte</h2>
+
+<h3 id="zahlen">Zahlen</h3>
+
+<p>Zahlen können einfach in JavaScript-Dokumente oder die Konsole geschrieben werden:</p>
+
+<ul>
+<li><code>5 + 10;</code></li>
+<li><code>6 * 8;</code></li>
+<li><code>12 - 14;</code></li>
+<li><code>8 / 4;</code></li>
+</ul>
+
+<p>In der Informatik unterscheidet man oft zwischen</p>
+
+<ul>
+<li><strong>«Integer»</strong> (kurz <em>Int</em>; DE: <strong>Ganzzahlen</strong>; &hellip;, -2, -1, 0, 1, 2, &hellip;)</li>
+<li><strong>«Floating Point Numbers»</strong> (kurz <em>Float</em>; DE: <strong>Fliesskommazahlen</strong>; z.B: -2.5, 3.333333334, 10.5)</li>
+</ul>
+
+<h3 id="string-text">String / Text</h3>
+
+<p>Text kann nicht einfach so in JavaScript verwendet werden. Tippt man z.B. <em>Dies ist ein Text</em> in die Konsole, erhält man einen Fehler.</p>
+
+<p>Um mit Text zu arbeiten, werden diese in Anführungszeichen gesetzt (<code>&quot;</code> oder <code>'</code>) und diese werden technisch <strong>String</strong> genannt:</p>
+
+<ul>
+<li><code>&quot;Hallo, mich nennt man einen String&quot;;</code></li>
+<li><code>'Du darfst mich auch mit den einfachen Anführungszeichen schreiben';</code></li>
+</ul>
+
+<p>Strings kann man mit einem Plus (<code>+</code>) zusammensetzen:</p>
+
+<ul>
+<li>Aus <code>&quot;Hallo&quot; + &quot;zusammen!&quot;</code> wird: <code>&quot;Hallozusammen!&quot;</code></li>
+</ul>
+
+<p><em>(Wortabstände werden nicht automatisch hinzugefügt, wie auch? JavaScript kann leider noch keine Gedanken lesen)</em></p>
+
+<h3 id="variablen">Variablen</h3>
+
+<p>Variablen sind ein sehr wichtiges Konzept in der Programmierung. Variablen sind Objekte, in denen Informationen gespeichert werden können, z.B. Zahlen, Texte oder sogar andere Objekte.</p>
+
+<p>Um eine Variable zu erstellen, verwendet man das Schlüsselwort <code>var</code> wie folgt:</p>
+
+<p><code>var meineVariable;</code></p>
+
+<p>Nun existiert die Variable <code>meineVariable</code>. Sie ist noch leer bzw. undefiniert.</p>
+
+<h4 id="daten-an-variablen-binden-informationen-speichern">Daten an Variablen binden / Informationen speichern</h4>
+
+<p>Hierzu verwenden wir das Gleichheitszeichen (<code>=</code>). Es wird von Rechts-nach-Links gelesen: Der Teil rechts vom <code>=</code> wird in die Variable links gespeichert:</p>
+
+<p><code>meineVariable = 2;</code></p>
+
+<p>Nun beinhält <code>meineVariable</code> den Wert <code>2</code>.</p>
+
+<p>Man kann die Erstellung und das Speichern auch im selben Zug machen:</p>
+
+<p><code>var meineVariable = 2;</code></p>
+
+<p>hat dasselbe Ergebnis wie</p>
+
+<p><code>var meineVariable;</code>
+<code>meineVariable = 2;</code></p>
+
+<p>Da die Variable nun eine Zahl enthält, kann z.B. damit gerechnet werden:</p>
+
+<p><code>4 * meineVariable; // ergibt 8</code></p>
+
+<h4 id="was-ist-so-toll-an-variablen">Was ist so toll an Variablen?</h4>
+
+<ul>
+<li><strong>Wiederverwendenung:</strong> Ich muss z.B. an mehreren Orten die MWST ausrechnen. Wieso nicht einmal als Variable <code>var mwst</code> speichern? Wird der Prozentsatz irgendwann angepasst, muss ich die Zahl nur einmal anpassen.</li>
+<li><strong>Aussagekräftig:</strong> Was ist einfach zu lesen und verstehen, <code>breiteDesLogo</code> oder <code>300</code>?</li>
+</ul>
+
+<p>Variablen helfen uns enorm, den technischen Code mit Wörtern und Wörterketten lesbarer zu machen. Stellt euch den perfekten Code als Koch-Rezept vor, dass sowohl ihr als auch der Computer versteht.</p>
+
+<p><em>Es ist üblich, den Code und somit die Namen von Variablen und Funktionen in englischer Sprache zu halten.</em></p>
+
+<h4 id="weiteres">Weiteres</h4>
+
+<ul>
+<li>Variablen können überschrieben werden: <code>meineVariable = &quot;Drei&quot;;</code></li>
+<li>Nach <code>4 * meineVariable;</code> ist <code>meineVarialbe</code> nicht das 4-fache. Soll das Ergebnis der Rechnung abgespeichert werden, benötigen wir dazu wieder das Gleichheitszeichen: <code>meineVariable = 4 * meineVariable;</code>. Nun wurde <code>meineVariable</code> vervierfacht und mit dem Ergebnis überschrieben.</li>
+</ul>
+
+<h3 id="boolean">Boolean</h3>
+
+<p>Unter dem Begriff <em>Boolean</em> versteht man einen Wert, der entweder <em>Wahr</em> oder <em>Falsch</em> ist. In JavaScript heissen die <code>true</code> (Wahr) und <code>false</code> (Falsch). Das wird verwendet, um logische Entscheidungen zu treffen.</p>
+
+<p><code>true</code> und <code>false</code> kommen zum Zuge, wenn z.B. zwei Werte verglichen werden:</p>
+
+<p><code>3 &lt; 4; // true</code></p>
+
+<p><code>&quot;TextA&quot; == &quot;TextB&quot;; // false</code></p>
+
+<p><code>&quot;Drei&quot; == 3; // false</code></p>
+
+<p><strong>Wichtig: Um zwei Werte nach Gleicheit zu vergleichen, müssen 2 Gleichheitszeichen (<code>==</code>) verwendet werden. Denn das einfache Gleichheitszeichen wird ja bereits schon verwendet, für das Binden von Variablen.</strong></p>
+
+<p>Noch besser: Verwende sogar 3 Gleichheitszeichen (<code>===</code>) für Vergleiche. Das ist noch einweniger Zuverlässiger:</p>
+
+<p><code>&quot;3&quot; == 3; // true</code></p>
+
+<p><code>&quot;3&quot; === 3; // false</code></p>
+
+<p>Dies wegen der sog. «JavaScript Type Coercion», auf die hier nicht weiter eingegangen wird.</p>
+
+<h2 id="funktionen">Funktionen</h2>
+
+<p>Funktionen helfen uns, den Überblick zu behalten (Gruppieren von Code) und nichts doppelt zu schreiben (Wiederverwendung von bestehendem Code).</p>
+
+<p>Eine Funktion wird meist erst definiert und anschliessend ein- oder mehrmals ausgeführt:</p>
+
+<h3 id="definieren">Definieren</h3>
+
+<p>Definiere eine Funktion mit dem Schlüsselwort <code>function</code>:</p>
+
+<pre><code class="language-javascript">function meineFunktion() {
+  // Inhalt der Funktion
+}
+</code></pre>
+
+<h3 id="aufrufen">Aufrufen</h3>
+
+<p>Um eine Funktion auszuführen, wird der Funktionsname mit runden Klammern verwendet:</p>
+
+<p><code>meineFunktion();</code></p>
+
+<p>Bei der Definition passiert noch nichts, ausser dass sich der Computer die Funktion unter dem gegebenen Funktionsnamen merkt. Erst wenn die Funktion aufgeruft wird, beginnt der Computer damit, den Inhalt der Funktion auszuführen.</p>
 
 <h1 id="visual-studio-code">Visual Studio Code</h1>
 
