@@ -109,6 +109,32 @@ Hier eine Starthilfe (zum Kopieren):
 
 # CSS
 
+## Einbinden
+
+* Inline
+
+```
+<p style="color: green;">Dieser Text ist grün</p>
+```
+
+* Style-Tag
+
+```
+// im HTML-Dokument, innerhalb des <head>-Elements
+<style>
+p {
+    color: green;
+}
+</style>
+```
+
+* Externes Stylesheet
+
+```
+// im HTML-Dokument, innerhalb des <head>-Elements
+<link rel="stylesheet" href="pfad/zum/style.css">
+```
+
 ## Syntax
 
 * Selektor `{ Eigenschaft: Wert; }`
@@ -232,31 +258,6 @@ div p {
 
 Habe noch ein gutes Video dazu gefunden: https://www.youtube.com/watch?v=GyXXkVZflnA
 
-## CSS Einbinden
-
-* Inline
-
-```
-<p style="color: green;">Dieser Text ist grün</p>
-```
-
-* Style-Tag
-
-```
-// im HTML-Dokument, innerhalb des <head>-Elements
-<style>
-p {
-    color: green;
-}
-</style>
-```
-
-* Externes Stylesheet
-
-```
-// im HTML-Dokument, innerhalb des <head>-Elements
-<link rel="stylesheet" href="pfad/zum/style.css">
-```
 
 ## Shorthands
 
@@ -295,8 +296,6 @@ border: 1px solid #EFEFEF;
 
 ![](links/baum.png)
 
-_(Screenshot ist direkt aus Visual Studio Code, wen’s interessiert, dem kann ich’s gerne mal zeigen, wo diese Darstellung zu finden ist)_
-
 ## Box Model
 * Abstände werden meist mit margin oder padding geregelt:
 
@@ -309,6 +308,176 @@ Abstand vom Rahmen ( border ) nach Innen.
 https://www.w3schools.com/css/css_boxmodel.asp
 
 ![](links/Box_Model.png)
+
+## Absolute Positionierung
+
+_[Link zur Dokumentation, MDN](https://developer.mozilla.org/de/docs/Web/CSS/position)_
+
+* Der Standardwert ist `static`: Alle Elemente sind im Dokumentenfluss und verdrängen sich gegenseitig.
+* Mit `relative` bleibt das Element im Dokumentenfluss. Kann jedoch mit den Eigenschaften `top`, `bottom`, `left` und `right` relativ zur Ausgangsposition verschoben werden. Der ursprüngliche Platz wird jedoch weiterhin «benützt» und verdrängt andere Elemente, als ob das Element in seiner Ursprungsposition wäre.
+* Mit `absolute` nimmt man das Element komplett aus dem Fluss. Verwendet man dazu `top`, `bottom`, `left` und `right`, wird das Element relativ zum Browser platziert. Man kann diese Abhängigkeit ändern, indem man einem Eltern-(!)-Element eine Position `relative` oder `absolute` gibt.
+
+### Ebenenreihenfolge
+
+Werden verschiedene Elemente relativ oder absolut positioniert, kann mit der Eigentschaft `z-index` gesteuert werden, welches Element welches Element überdeckt.
+
+## Excercise #5
+
+<a class="btn" href="downloads/exercise5/exercise5.zip">Download</a>
+
+# JavaScript
+
+## Einleitung
+
+Die Programmiersprache _JavaScript_ (kurz _JS_) wird für vieles eingesetzt (Beispiele):
+
+* Interaktivität im Internet
+  * Animationen
+  * Formular Validierung
+* Interaktive PDFs
+* Scripting in InDesign
+* Server-seitig
+
+(_JavaScript_ ist nicht zu verwechseln mit _Java_, eine andere Programmiersprache!)
+
+## Syntax
+
+* Ähnlich wie _CSS_ werden JavaScript-Ausdrucke mit einem Semikolon (`;`) beendet.
+* Ebenfalls ähnlich wie _CSS_, werden Blocks mit geschweiften Klammern (`{...}`) zusammengehalten (Diese Klammern werden aber auch für andere Dinge verwendet).
+* Namen für Variablen, Funktionen und weitere Namen, die man selbst wählen kann, werden in der sogenannten _camelCase_-Schreibweise geschrieben: Erster Buchstabe wird klein geschrieben; Wenn mehrere Worte zusammengenommen werden, beginnt jedes weitere Wort mit einem Grossbuchstaben. (Beispiele: `meineVariable`, `autoBauMaschine`, `htmlToCssConverter`).
+* **Kommentare** werden wir im _CSS_ entweder mit `//` (Zeilenkommentar) oder `/* */` (Blockkommentar) geschrieben.
+
+## Konsole
+
+Die meisten Webbrowser kommen mit einer JavaScript-Konsole, die erlauben es schnelle Fehler zu finden (sog. _Debugging_) und mithilfe von JavaScript direkt mit der Webseite zu interagieren.
+
+Im _Google Chrome_ kann die Konsole aufgerufen werden, indem man einen Rechtsklick auf eine Webseite macht, dabei den Menüpunkt «Untersuchen» wählt und anschliessend im nun offnen Bereich (sog. _DevTools_ -> Developer Tools -> Werkzeuge für Entwickler) auf das Tab _Console_ wechselt.
+
+Darin kann direkt JavaScript geschrieben werden und man erhält nach jedem Enter sogleich ein Feedback, falls man der Konsole auch was zu tun gegeben hat. Z.B. `3 + 5;` gibt die Antwort `8`;
+
+Eine gute Alternative, um mit der JavaScript und der Konsole Dinge zu testen, empfehle ich die [REPL-Seite](https://repl.it/languages) -> «HTML, CSS, JS».
+
+## Erste Konzepte
+
+### Zahlen
+
+Zahlen können einfach in JavaScript-Dokumente oder die Konsole geschrieben werden:
+
+* `5 + 10;`
+* `6 * 8;`
+* `12 - 14;`
+* `8 / 4;`
+
+In der Informatik unterscheidet man oft zwischen
+
+* **«Integer»** (kurz _Int_; DE: **Ganzzahlen**; ..., -2, -1, 0, 1, 2, ...)
+* **«Floating Point Numbers»** (kurz _Float_; DE: **Fliesskommazahlen**; z.B: -2.5, 3.333333334, 10.5)
+
+### String / Text
+
+Text kann nicht einfach so in JavaScript verwendet werden. Tippt man z.B. _Dies ist ein Text_ in die Konsole, erhält man einen Fehler.
+
+Um mit Text zu arbeiten, werden diese in Anführungszeichen gesetzt (`"` oder `'`) und diese werden technisch **String** genannt:
+
+* `"Hallo, mich nennt man einen String";`
+* `'Du darfst mich auch mit den einfachen Anführungszeichen schreiben';`
+
+Strings kann man mit einem Plus (`+`) zusammensetzen:
+
+* Aus `"Hallo" + "zusammen!"` wird: `"Hallozusammen!"`
+
+_(Wortabstände werden nicht automatisch hinzugefügt, wie auch? JavaScript kann leider noch keine Gedanken lesen)_
+
+### Variablen
+
+Variablen sind ein sehr wichtiges Konzept in der Programmierung. Variablen sind Objekte, in denen Informationen gespeichert werden können, z.B. Zahlen, Texte oder sogar andere Objekte.
+
+Um eine Variable zu erstellen, verwendet man das Schlüsselwort `var` wie folgt:
+
+`var meineVariable;`
+
+Nun existiert die Variable `meineVariable`. Sie ist noch leer bzw. undefiniert.
+
+#### Daten an Variablen binden / Informationen speichern
+
+Hierzu verwenden wir das Gleichheitszeichen (`=`). Es wird von Rechts-nach-Links gelesen: Der Teil rechts vom `=` wird in die Variable links gespeichert:
+
+`meineVariable = 2;`
+
+Nun beinhält `meineVariable` den Wert `2`.
+
+Man kann die Erstellung und das Speichern auch im selben Zug machen:
+
+`var meineVariable = 2;`
+
+hat dasselbe Ergebnis wie
+
+`var meineVariable;`
+`meineVariable = 2;`
+
+Da die Variable nun eine Zahl enthält, kann z.B. damit gerechnet werden:
+
+`4 * meineVariable; // ergibt 8`
+
+#### Was ist so toll an Variablen?
+
+* **Wiederverwendenung:** Ich muss z.B. an mehreren Orten die MWST ausrechnen. Wieso nicht einmal als Variable `var mwst` speichern? Wird der Prozentsatz irgendwann angepasst, muss ich die Zahl nur einmal anpassen.
+* **Aussagekräftig:** Was ist einfach zu lesen und verstehen, `breiteDesLogo` oder `300`?
+
+Variablen helfen uns enorm, den technischen Code mit Wörtern und Wörterketten lesbarer zu machen. Stellt euch den perfekten Code als Koch-Rezept vor, dass sowohl ihr als auch der Computer versteht.
+
+_Es ist üblich, den Code und somit die Namen von Variablen und Funktionen in englischer Sprache zu halten._
+
+#### Weiteres
+
+* Variablen können überschrieben werden: `meineVariable = "Drei";`
+* Nach `4 * meineVariable;` ist `meineVarialbe` nicht das 4-fache. Soll das Ergebnis der Rechnung abgespeichert werden, benötigen wir dazu wieder das Gleichheitszeichen: `meineVariable = 4 * meineVariable;`. Nun wurde `meineVariable` vervierfacht und mit dem Ergebnis überschrieben.
+
+### Boolean
+
+Unter dem Begriff _Boolean_ versteht man einen Wert, der entweder _Wahr_ oder _Falsch_ ist. In JavaScript heissen die `true` (Wahr) und `false` (Falsch). Das wird verwendet, um logische Entscheidungen zu treffen.
+
+`true` und `false` kommen zum Zuge, wenn z.B. zwei Werte verglichen werden:
+
+`3 < 4; // true`
+
+`"TextA" == "TextB"; // false`
+
+`"Drei" == 3; // false`
+
+**Wichtig: Um zwei Werte nach Gleicheit zu vergleichen, müssen 2 Gleichheitszeichen (`==`) verwendet werden. Denn das einfache Gleichheitszeichen wird ja bereits schon verwendet, für das Binden von Variablen.**
+
+Noch besser: Verwende sogar 3 Gleichheitszeichen (`===`) für Vergleiche. Das ist noch einweniger Zuverlässiger:
+
+`"3" == 3; // true`
+
+`"3" === 3; // false`
+
+Dies wegen der sog. «JavaScript Type Coercion», auf die hier nicht weiter eingegangen wird.
+
+## Funktionen
+
+Funktionen helfen uns, den Überblick zu behalten (Gruppieren von Code) und nichts doppelt zu schreiben (Wiederverwendung von bestehendem Code).
+
+Eine Funktion wird meist erst definiert und anschliessend ein- oder mehrmals ausgeführt:
+
+### Definieren
+
+Definiere eine Funktion mit dem Schlüsselwort `function`:
+
+```javascript
+function meineFunktion() {
+  // Inhalt der Funktion
+}
+```
+
+### Aufrufen
+
+Um eine Funktion auszuführen, wird der Funktionsname mit runden Klammern verwendet:
+
+`meineFunktion();`
+
+Bei der Definition passiert noch nichts, ausser dass sich der Computer die Funktion unter dem gegebenen Funktionsnamen merkt. Erst wenn die Funktion aufgeruft wird, beginnt der Computer damit, den Inhalt der Funktion auszuführen.
 
 # Visual Studio Code
 
