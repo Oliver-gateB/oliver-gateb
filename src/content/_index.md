@@ -478,6 +478,10 @@ Um eine Funktion auszuführen, wird der Funktionsname mit runden Klammern verwen
 
 Bei der Definition passiert noch nichts, ausser dass sich der Computer die Funktion unter dem gegebenen Funktionsnamen merkt. Erst wenn die Funktion aufgeruft wird, beginnt der Computer damit, den Inhalt der Funktion auszuführen.
 
+### Excercise #6
+
+<a class="btn" href="downloads/exercise6/exercise6.zip">Download</a>
+
 # Visual Studio Code
 
 ## Plugins
